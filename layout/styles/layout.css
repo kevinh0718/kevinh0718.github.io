@@ -1,52 +1,48 @@
 @charset "utf-8";
 /*
-Template Name: Vallume
+Template Name: Yeinydd
 Author: <a href="https://www.os-templates.com/">OS Templates</a>
 Author URI: https://www.os-templates.com/
+Copyright: OS-Templates.com
 Licence: Free to use under our free template licence terms
 Licence URI: https://www.os-templates.com/template-terms
 File: Layout CSS
 */
 
-@import url("font-awesome.min.css");
+@import url("fontawesome-free/css/fontawesome-all.min.css");
 @import url("framework.css");
 
 /* Rows
 --------------------------------------------------------------------------------------------------------------- */
 .row0, .row0 a{}
-.row1, .row1 a{}
+.row1{padding:80px 0 0 0;}
 .row2, .row2 a{}
 .row3, .row3 a{}
 .row4, .row4 a{}
 .row5, .row5 a{}
 
 
-/* Top Bar
---------------------------------------------------------------------------------------------------------------- */
-#topbar{padding:15px 0; font-size:.8rem; text-transform:uppercase;}
-
-#topbar *{margin:0;}
-#topbar ul li{display:inline-block; margin-right:10px; padding-right:15px; border-right:1px solid;}
-#topbar ul li:last-child{margin-right:0; padding-right:0; border-right:none;}
-#topbar i{margin:0 5px 0 0; line-height:normal;}
-
-
 /* Header
 --------------------------------------------------------------------------------------------------------------- */
-#header{}
+#header{padding:0 15px; border:solid; border-width:1px 0;}
 
-#header #logo{margin:30px 0 0 0;}
-#header #logo h1{margin:0; padding:0; font-size:22px; text-transform:uppercase;}
+#header #logo{margin:28px 0 0 0;}
+#header #logo h1{margin:0; padding:0; font-size:22px; line-height:1; text-transform:uppercase;}
 
 
 /* Page Intro
 --------------------------------------------------------------------------------------------------------------- */
-#pageintro{padding:150px 0 250px;}
+#pageintro{padding:180px 0;}
 
-#pageintro article{display:block; max-width:65%; margin:0 auto; text-align:center;}
+#pageintro article{display:block; max-width:60%; margin:0 auto; text-align:center;}
 #pageintro .heading{margin-bottom:20px; font-size:4rem;}
-#pageintro p:first-of-type{margin:0 0 20px 0; text-transform:uppercase; font-size:1.2rem; letter-spacing:5px;}
+#pageintro p{max-width:75%; margin:0 auto;}
 #pageintro footer{margin-top:50px;}
+#pageintro footer form{display:block; position:relative; max-width:50%; margin:0 auto; overflow:hidden;}
+#pageintro footer input, #pageintro footer button{display:block; height:44px; border:none;}
+#pageintro footer input{width:100%; padding:5px 40px 5px 15px;}
+#pageintro footer button{position:absolute; top:1px; right:1px; width:42px; height:42px; font-size:16px; cursor:pointer;}
+#pageintro footer button em{display:none;}
 
 
 /* Content Area
@@ -57,28 +53,16 @@ File: Layout CSS
 .container .content{}
 
 .sectiontitle{display:block; max-width:55%; margin:0 auto 80px; text-align:center;}
-.sectiontitle *{margin:0;}
+.sectiontitle .heading{margin:0; padding:0; line-height:1;}
 
-#introblocks{position:relative; z-index:1; margin:-180px 0 80px; padding:80px 0 0 0; border-radius:10px;}
-#introblocks > ul > li{text-align:center;}/* Used when elements stack */
-#introblocks > ul > li img{width:100%;}/* Force image width to fit the full width - remove if you don't like the function */
-#introblocks article{display:block; position:relative; padding:0 0 0 95px; line-height:normal; text-align:left;}
-#introblocks article *{margin:0; padding:0;}
-#introblocks article i{display:inline-block; position:absolute; top:0; left:0; width:85px; overflow:hidden; line-height:1; font-size:65px;}
-#introblocks article .heading{margin-bottom:10px;}
-
-.overview{}
-.overview > li{margin-bottom:50px;}
-.overview > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
-.overview > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
-.overview > li figure{max-width:320px;}
-.overview > li figure img{margin-bottom:30px;}
-.overview > li figure figcaption *{margin:0;}
-.overview > li figure .heading{margin-bottom:10px; font-size:1.2rem;}
-
-.clients{}
-.clients li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
-.clients li a{display:inline-block; max-width:100%;}
+#introblocks{}
+#introblocks ul{text-align:center;}
+#introblocks ul li{}
+#introblocks ul li article{}
+#introblocks ul li article i{margin-bottom:30px; font-size:42px}
+#introblocks ul li article .heading{}
+#introblocks ul li article p{}
+#introblocks ul li article footer{margin-top:30px;}
 
 /* Comments */
 #comments ul{margin:0 0 40px 0; padding:0; list-style:none;}
@@ -102,33 +86,69 @@ File: Layout CSS
 .sidebar .sdb_holder:last-child{margin-bottom:0;}
 
 
-/* Click to Action
+/* References
 --------------------------------------------------------------------------------------------------------------- */
-.cta{padding:50px 0;}
-.cta > :first-child{margin-top:10px;}
-.cta > :last-child{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+#references{}
+
+#references .ref-sort{display:block; margin-bottom:50px; text-align:center;}
+#references .ref-sort ul{margin:0; padding:0; list-style:none; text-transform:uppercase;}
+#references .ref-sort li{display:inline-block; position:relative; margin:0 10px 0 0; padding:0 20px 0 0;}
+#references .ref-sort li::after{position:absolute; top:0; right:0; content:"/";}
+#references .ref-sort li:last-child{margin:0; padding:0;}
+#references .ref-sort li:last-child::after{display:none;}
+#references .ref-sort li a{}
+
+#references .ref-img{margin-bottom:80px;}
+#references .ref-img li{margin-bottom:30px;}
+#references .ref-img li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#references .ref-img li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+
+
+/* Latest
+--------------------------------------------------------------------------------------------------------------- */
+#latest{}
+
+#latest > li:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
+#latest article{}
+#latest article img{width:100%;}/* Force the image to have the full width of parent at all times */
+#latest article .excerpt{padding:30px 15px 0;}
+#latest article .excerpt time{display:block; margin:0 0 30px 0; padding:0 0 15px 0; font-style:normal; font-size:.8rem; line-height:1; border-bottom:1px solid;}
+#latest article .excerpt time i{margin-right:5px;}
+#latest article .excerpt .heading{margin:0 0 10px 0; font-size:1.3rem;}
+#latest article .excerpt .meta{margin:0 0 30px 0; padding:0; list-style:none; text-align:left;}
+#latest article .excerpt .meta li{display:inline-block; font-size:.8rem;}
+#latest article .excerpt .meta li::after{margin-left:5px; content:"|";}
+#latest article .excerpt .meta li:last-child::after{margin:0; content:"";}
+#latest article .excerpt p{}
+#latest article .excerpt footer{margin-top:30px;}
 
 
 /* Testimonials
 --------------------------------------------------------------------------------------------------------------- */
-.testimonials{}
+#testimonials{}
 
-.testimonials li:last-child{margin-bottom:0;}/* Used when elements stack in smaller viewports */
-.testimonials blockquote{margin-bottom:30px; padding:20px; border-radius:10px;}
-.testimonials blockquote::before{top:10px; left:10px; font-size:32px; line-height:32px;}
-.testimonials blockquote::after{display:block; position:absolute; bottom:-15px; left:30px; width:0; height:0; content:""; border:15px solid transparent; border-bottom:none;}
-.testimonials figure{}
-.testimonials figure *{margin:0; line-height:1;}
-.testimonials figure img{float:left; margin:0 15px;}
-.testimonials figcaption{float:left; margin-top:10px;}
-.testimonials figcaption .heading{font-size:1.2rem; font-weight:700;}
-.testimonials figcaption em{font-size:.8rem;}
-.testimonials footer{text-align:center;}
+#testimonials article{position:relative; padding-left:110px;}
+#testimonials article *{margin:0; padding:0;}
+#testimonials article:last-child{margin-bottom:0;}/* Used when elements stack in small viewports */
+#testimonials article img{position:absolute; top:0; left:0; border-radius:50%;}
+#testimonials article blockquote{margin:0 0 20px 0; padding:0;}
+#testimonials article .heading{}
+#testimonials article em{display:block; margin-top:-5px; font-size:.8rem; font-style:normal;}
+
+
+/* Click to Action
+--------------------------------------------------------------------------------------------------------------- */
+.cta{padding:50px 0;}
+
+.cta > :first-child{margin-top:10px;}
+.cta > :last-child{margin-bottom:0;}/* Used when elements stack in smaller viewports */
+.cta footer{text-align:center;}
+.cta footer a{display:block;}
 
 
 /* Footer
 --------------------------------------------------------------------------------------------------------------- */
-#footer{padding:80px 0 50px;}
+#footer{padding:80px 0;}
 
 #footer .heading{margin-bottom:50px; font-size:1.2rem;}
 
@@ -137,14 +157,24 @@ File: Layout CSS
 #footer .linklist li::before, #footer .linklist li::after{display:table; content:"";}
 #footer .linklist li, #footer .linklist li::after{clear:both;}
 
-#footer .contact{}
-#footer .contact.linklist li, #footer .contact.linklist li:last-child{position:relative; padding-left:40px;}
-#footer .contact li *{margin:0; padding:0; line-height:1.6;}
-#footer .contact li i{display:block; position:absolute; top:0; left:0; width:30px; font-size:16px; text-align:center;}
-
 #footer input, #footer button{border:1px solid;}
 #footer input{display:block; width:100%; padding:8px;}
-#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:700; cursor:pointer;}
+#footer button{padding:8px 18px 10px; text-transform:uppercase; font-weight:400; cursor:pointer;}
+
+#footer .latestimg{}
+#footer .latestimg > li{display:inline-block; float:left; width:30%; margin:0 0 5% 5%;}
+#footer .latestimg > li:nth-last-child(-n+3){margin-bottom:0;}/* Removes bottom margin from the last three items - margin is restored in the media queries when items stack */
+#footer .latestimg > li:nth-child(3n+1){margin-left:0; clear:left;}/* Removes the need to add class="first" */
+#footer .latestimg > li img{width:100%;}/* Force the image to resize to take the full space - may have to be changed for tablets, depends on personal preference */
+#footer .latestimg > li a.imgover{display:block;}
+
+#footer #ctdetails{padding-top:80px; border-top:1px solid;}
+#footer #ctdetails ul{}
+#footer #ctdetails ul li{}
+#footer #ctdetails ul li div{position:relative; min-height:30px; padding:0 0 0 35px; line-height:1;}
+#footer #ctdetails ul li div i{position:absolute; top:0; left:0; width:25px; height:23px; font-size:20px; text-align:center;}
+#footer #ctdetails ul li div span{display:block;}
+#footer #ctdetails ul li div strong{display:block; margin:0 0 8px 0; text-transform:capitalize;}
 
 
 /* Copyright
@@ -174,12 +204,12 @@ Delete it completely to stop fading
 nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav, #breadcrumb, .sidebar nav{line-height:normal;}
-#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"FontAwesome"; font-size:10px; line-height:10px;}
+#mainav .drop::after, #mainav li li .drop::after, #breadcrumb li a::after, .sidebar nav a::after{position:absolute; font-family:"Font Awesome\ 5 Free"; font-weight:900; font-size:10px; line-height:10px;}
 
 /* Top Navigation */
 #mainav{}
 #mainav ul{text-transform:uppercase;}
-#mainav ul ul{z-index:9999; position:absolute; width:180px; text-transform:none;}
+#mainav ul ul{position:absolute; width:180px; text-transform:none; z-index:9999;}
 #mainav ul ul ul{left:180px; top:0;}
 #mainav li{display:inline-block; position:relative; margin:0 15px 0 0; padding:0;}
 #mainav li:last-child{margin-right:0;}
@@ -196,24 +226,24 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 
 #mainav form{display:none; margin:0; padding:0;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
-#mainav form select{width:100%; padding:5px; border:1px solid;}
+#mainav form select{width:100%; padding:5px; border:none;}
 #mainav form select option{margin:5px; padding:0; border:none;}
 
 /* Breadcrumb */
-#breadcrumb{padding:120px 0 30px;}
+#breadcrumb{padding:150px 0 30px; text-align:center;}
 #breadcrumb ul{margin:0; padding:0; list-style:none; text-transform:uppercase;}
 #breadcrumb li{display:inline-block; margin:0 6px 0 0; padding:0;}
-#breadcrumb li a{display:block; position:relative; margin:0; padding:0 12px 0 0; font-size:12px;}
-#breadcrumb li a::after{top:3px; right:0; content:"\f101";}
+#breadcrumb li a{display:block; position:relative; margin:0; padding:0 12px 0 0; font-size:.8rem; line-height:1;}
+#breadcrumb li a::after{top:2px; right:0; content:"\f0da";}
 #breadcrumb li:last-child a{margin:0; padding:0;}
 #breadcrumb li:last-child a::after{display:none;}
-#breadcrumb .heading{margin:0; font-size:1.6rem;}
+#breadcrumb .heading{margin:0 0 10px 0; font-size:2rem;}
 
 /* Sidebar Navigation */
 .sidebar nav{display:block; width:100%;}
 .sidebar nav li{margin:0 0 3px 0; padding:0;}
 .sidebar nav a{display:block; position:relative; margin:0; padding:5px 10px 5px 15px; text-decoration:none; border:solid; border-width:0 0 1px 0;}
-.sidebar nav a::after{top:9px; left:5px; content:"\f101";}
+.sidebar nav a::after{top:10px; left:5px; content:"\f0da";}
 .sidebar nav ul ul a{padding-left:35px;}
 .sidebar nav ul ul a::after{left:25px;}
 .sidebar nav ul ul ul a{padding-left:55px;}
@@ -255,8 +285,8 @@ td{border-width:0 1px;}
 .faico li:last-child{margin-right:0;}
 .faico a{display:inline-block; width:36px; height:36px; line-height:36px; font-size:18px; text-align:center;}
 
-.faico a{color:#474747; background-color:#EEEEEE;}
-.faico a:hover{color:#FFFFFF; background-color:#FF090F;}
+.faico a{color:#474747; background-color:#DBE5E7;}
+.faico a:hover{color:#FFFFFF;}
 
 .faicon-dribble:hover{background-color:#EA4C89;}
 .faicon-facebook:hover{background-color:#3B5998;}
@@ -275,91 +305,88 @@ td{border-width:0 1px;}
 
 /* Colours
 --------------------------------------------------------------------------------------------------------------- */
-body{color:#474747; background-color:#FFFFFF;}
-a{color:#FF090F;}
+body{color:#C1C2C4; background-color:#2A2D34;}
+a{color:#829DA2;}
 a:active, a:focus{background:transparent;}/* IE10 + 11 Bugfix - prevents grey background */
 hr, .borderedbox{border-color:#D7D7D7;}
 label span{color:#FF0000; background-color:inherit;}
-input:focus, textarea:focus, *:required:focus{border-color:#FF090F;}
+input:focus, textarea:focus, *:required:focus{border-color:#829DA2;}
 
 .overlay{color:#FFFFFF; background-color:inherit;}
 .overlay::after{color:inherit; background-color:rgba(0,0,0,.55);}
 .overlay.light{color:#474747;}
-.overlay.light::after{background-color:rgba(233,233,233,.9);/* #E9E9E9 */}
+.overlay.light::after{background-color:rgba(255,255,255,.7);}
 
-.btn, .btn.inverse:hover{color:#FFFFFF; background-color:#FF090F; border-color:#FF090F;}
+.btn, .btn.inverse:hover{color:#474747; background-color:#DBE5E7; border-color:#829DA2;}
 .btn:hover, .btn.inverse{color:inherit; background-color:transparent; border-color:inherit;}
 
-blockquote::before{color:rgba(0,0,0,.2);}
+.imgover:hover::before{background:rgba(130,157,162,.5);/* #829DA2 */}
+.imgover, .imgover:hover::after{color:#FFFFFF;}
 
 
 /* Rows */
-.row0, .row0 a{color:#474747;}
-.row1{color:#474747; background-color:#EEEEEE;}
-.row2{color:#474747; background-color:#EEEEEE;}
+.row0, .row0 a{}
+.row1, .row1 a{}
+.row2{color:#474747; background-color:#F4F4F4;}
 .row3{color:#474747; background-color:#FFFFFF;}
-.row4{color:#CBCBCB;}
-.row5{color:#676767; background-color:rgba(0,0,0,.5);}
-.row5 a{color:inherit;}
-
-
-/* Top Bar */
-#topbar ul li{border-color:rgba(0,0,0,.2);}
-#topbar div:first-of-type li:first-child a{color:#D01818;}
+.row4{color:#C1C2C4; background-color:#323639;}
+.row5, .row5 a{color:#C1C2C4; background-color:#2A2D34;}
 
 
 /* Header */
-#header #logo a{color:inherit;}
+#header{border-color:rgba(255,255,255,.2);}
+#header #logo h1 a{color:inherit;}
 
 
 /* Page Intro */
 #pageintro{color:#FFFFFF;}
+#pageintro footer input{color:#FFFFFF; background-color:rgba(255,255,255,.5);}
+#pageintro footer button{color:#474747; background-color:#DBE5E7;}
 
 
-/* Content Area */
-#introblocks{color:#474747; background-color:#FFFFFF;}
-#introblocks article i{color:rgba(0,0,0,.2);}
-#introblocks article:hover .heading a, #introblocks article:hover i{color:inherit;}
+/* References */
+#references .ref-sort li a{color:inherit;}
+#references .ref-sort li a:hover, #references .ref-sort li.current a{color:#829DA2;}
 
 
-/* Testimonials */
-.testimonials blockquote{color:#474747; background-color:#FFFFFF;}
-.testimonials blockquote::before{color:rgba(244,244,244,.8);/* #F4F4F4 */}
-.testimonials blockquote::after{border-top-color:#FFFFFF;}
+/* Latest */
+#latest article .excerpt time{border-color:#D7D7D7;}
 
 
 /* Footer */
 #footer .heading{color:#FFFFFF;}
-#footer hr, #footer .borderedbox, #footer .linklist li{border-color:rgba(255,255,255,.2);}
+#footer hr, #footer .borderedbox, #footer .linklist li, #footer #ctdetails{border-color:rgba(255,255,255,.1);}
 
 #footer input, #footer button{border-color:transparent;}
-#footer input{color:#474747; background-color:#EEEEEE;}
-#footer input:focus{border-color:#FF090F;}
-#footer button{color:#FFFFFF; background-color:#FF090F;}
+#footer input{color:#FFFFFF; background-color:#829DA2;}
+#footer input:focus{border-color:#DBE5E7;}
+#footer button{color:#474747; background-color:#DBE5E7;}
+#footer button:hover{color:inherit; background-color:transparent; border-color:inherit;}
 
 
 /* Navigation */
+#mainav{}
 #mainav li a{color:inherit;}
-#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#FF090F; background-color:inherit;}
-#mainav li li a, #mainav .active li a{color:#474747; background-color:rgba(233,233,233,.8);/* #E9E9E9 */ border-color:rgba(255,255,255,.4);}
-#mainav li li:hover > a, #mainav .active .active > a{color:#FFFFFF; background-color:#FF090F;}
-#mainav form select{color:#FFFFFF; background-color:#000000;}
+#mainav .active a, #mainav a:hover, #mainav li:hover > a{color:#DBE5E7; background-color:inherit;}
+#mainav li li a, #mainav .active li a{color:#FFFFFF; background-color:rgba(130,157,162,.5);/* #829DA2 */ border-color:rgba(0,0,0,.6);}
+#mainav li li:hover > a, #mainav .active .active > a{color:#DBE5E7; background-color:#829DA2;}
+#mainav form select{color:#474747; background-color:#FFFFFF;}
 
 #breadcrumb a{color:inherit; background-color:inherit;}
-#breadcrumb li:last-child a{color:#FF090F;}
+#breadcrumb li:last-child a{color:#829DA2;}
 
 .container .sidebar nav a{color:inherit; border-color:#D7D7D7;}
-.container .sidebar nav a:hover{color:#FF090F;}
+.container .sidebar nav a:hover{color:#829DA2;}
 
 .pagination a, .pagination strong{border-color:#D7D7D7;}
-.pagination .current *{color:#FFFFFF; background-color:#FF090F;}
+.pagination .current *{color:#FFFFFF; background-color:#829DA2;}
 
-#backtotop{color:#FFFFFF; background-color:#FF090F;}
+#backtotop{color:#FFFFFF; background-color:#829DA2;}
 
 
 /* Tables + Comments */
 table, th, td, #comments .avatar, #comments input, #comments textarea{border-color:#D7D7D7;}
-#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#FF090F;}
+#comments input:focus, #comments textarea:focus, #comments *:required:focus{border-color:#829DA2;}
 th{color:#FFFFFF; background-color:#373737;}
 tr, #comments li, #comments input[type="submit"], #comments input[type="reset"]{color:inherit; background-color:#FBFBFB;}
 tr:nth-child(even), #comments li:nth-child(even){color:inherit; background-color:#F7F7F7;}
@@ -380,19 +407,21 @@ table a, #comments a{background-color:inherit;}
 
 /* Max Wrapper Width - Laptop, Desktop etc.
 --------------------------------------------------------------------------------------------------------------- */
-@media screen and (min-width:978px){
-	.hoc{max-width:978px;}
+@media screen and (min-width:1140px){
+	.hoc{max-width:1140px;}
+}
+
+@media screen and (min-width:978px) and (max-width:1140px){
+	.hoc{max-width:95%;}
 }
 
 
 /* Mobile Devices
 --------------------------------------------------------------------------------------------------------------- */
-@media screen and (max-width:900px){
+@media screen and (max-width:978px){
 	.hoc{max-width:90%;}
 
-	#topbar{}
-
-	#header{padding:30px 0;}
+	#header{padding:30px 15px;}
 	#header #logo{margin-top:3px;}
 
 	#mainav{}
@@ -411,38 +440,42 @@ table a, #comments a{background-color:inherit;}
 	#copyright p:first-of-type{margin-bottom:10px;}
 }
 
-
 @media screen and (max-width:750px){
-	.flex-direction-nav .flex-prev, .flex-direction-nav .flex-next{display:none;}
-	.flex-control-nav{display:block;}
-
 	.imgl, .imgr{display:inline-block; float:none; margin:0 0 10px 0;}
 	.fl_left, .fl_right{display:block; float:none;}
 	.group .group > *:last-child, .clear .clear > *:last-child, .clear .group > *:last-child, .group .clear > *:last-child{margin-bottom:0;}/* Experimental - Needs more testing in different situations, stops double margin when stacking */
 	.one_half, .one_third, .two_third, .one_quarter, .two_quarter, .three_quarter{display:block; float:none; width:auto; margin:0 0 30px 0; padding:0;}
 
-	#topbar{padding-top:15px; text-align:center;}
-	#topbar ul{margin:0 0 15px 0; line-height:normal;}
+	#header{padding:30px 0; text-align:center;}
+	#header #logo{margin:0 0 20px 0;}
 
-	#header{text-align:center;}
-	#header #logo{margin:0 0 15px 0;}
-
-	#pageintro article{max-width:none; text-align:left;}
+	#pageintro article, #pageintro p{max-width:none; margin:auto;}
 	#pageintro .heading{font-size:2rem;}
 
-	#introblocks .sectiontitle{max-width:80%;}
-	#introblocks > ul > li:last-child{margin-bottom:0;}
+	.sectiontitle{max-width:none; margin-bottom:50px;}
 
-	.sectiontitle{max-width:none;}
+	.sectiontitle, #introblocks ul, #references .ref-sort{text-align:left;}
 
-	.overview > li:nth-last-child(-n+3){margin-bottom:50px;}
+	#references .ref-img{margin-bottom:20px;}
+	#references .ref-img li:nth-last-child(-n+3){margin-bottom:30px;}
+	#references .ref-img + footer{text-align:left;}
 
-	.cta > :first-child{margin-top:0;}
+	#latest article{max-width:348px;}
+
+	.cta > :first-child{margin-top:0; text-align:center;}
+	.cta footer a{display:inline-block;}
+
+	#footer{padding-bottom:50px;}/* Not required, just looks a little better */
+	#footer .latestimg > li{display:inline-block; float:none; width:auto; margin:0 5% 5% 0;}
+	#footer .latestimg > li img{width:auto;}
 }
 
-
 @media screen and (max-width:450px){
-	#topbar ul li{margin-bottom:2px; padding-right:0; border-right:none;}
+	#pageintro footer form{max-width:none; width:100%;}
+
+	#testimonials article{padding-left:0;}
+	#testimonials article:first-of-type{margin-bottom:50px;}
+	#testimonials article img{position:relative; top:inherit; left:inherit; margin-bottom:20px;}
 }
 
 
