@@ -39,7 +39,8 @@ p {
 .section-heading {
   text-align: left;
   position: relative;
-  margin-bottom: 60px;
+  margin-bottom: 30px; 
+  /* Kevin: Update for reducing bottom */
 }
 
 .section-heading h1 {
@@ -414,15 +415,15 @@ header {
 }
 
 .Modern-Slider .item-1 .image {
-  background-image: url(../img/slide_1.jpg);
+  background-image: url(../img/slide_01.jpg);
 }
 
 .Modern-Slider .item-2 .image {
-  background-image: url(../img/slide_2.jpg);
+  background-image: url(../img/slide_03.jpg);
 }
 
 .Modern-Slider .item-3 .image {
-  background-image: url(../img/slide_3.jpg);
+  background-image: url(../img/slide_02.jpg);
 }
 
 .Modern-Slider .PrevArrow:before{content:'\f104';}
@@ -617,7 +618,10 @@ header {
   opacity: 0.5;
 }
 
-
+#projects .item .text-content {
+  text-align: left; /* Kevin: Updates to align left */
+  position: relative;
+}
 
 /* Video Presentation Style */
 
@@ -790,10 +794,13 @@ header {
   padding: 0;
   margin: 0;
   list-style: none;
+  text-align: left; /* Kevin: Updates to align left */
 }
 
 #blog .tabgroup ul li {
-  display: inline-block;
+  /* display: inline-block; */ 
+  /* Kevin */
+  display: block;
   text-align: left;
   margin-bottom: 10px;
   padding-bottom: 20px;
