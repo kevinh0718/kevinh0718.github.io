@@ -660,7 +660,7 @@ header {
 #video .profile-img {
   float: right;              /* Keeps it on the right */
   margin: 10px 0 15px 15px;  /* Top margin to align closer to h1 */
-  width: 250px;              /* Your size */
+  width: 100px;              /* Your size */
   height: auto;
   max-height: 500px;
 }
