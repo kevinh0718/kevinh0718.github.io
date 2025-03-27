@@ -540,6 +540,8 @@ header {
 #featured .item .image img {
   width: 100%;
   overflow: hidden;
+  height: auto; /* Maintain aspect ratio */
+  max-width: 100%; /* Prevents exceeding container */
 }
 
 #featured .item .image .featured-button a {
@@ -633,7 +635,12 @@ header {
 
 #video .section-heading {
   margin-bottom: 30px;
-  text-align: center;
+  text-align: left; /* Kevin: Updates to align left */
+}
+
+#video .section-heading img {
+  margin-bottom: 30px;
+  text-align: right; /* Kevin: Updates to align left */
 }
 
 #video .section-heading h1 {
@@ -648,6 +655,19 @@ header {
 
 #video .accent-button {
   margin-top: 30px;
+}
+
+#video .profile-img {
+  float: right;              /* Keeps it on the right */
+  margin: 10px 0 15px 15px;  /* Top margin to align closer to h1 */
+  width: 250px;              /* Your size */
+  height: auto;
+  max-height: 500px;
+}
+
+#video .section-heading p {
+  overflow: hidden;          /* Ensures text wraps around the float */
+  margin-top: 0;             /* Removes default top margin to close gap */
 }
 
 .box-video{
